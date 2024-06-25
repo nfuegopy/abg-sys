@@ -18,6 +18,7 @@ import { FirebaseAdminModule } from '../firebase-admin/firebase-admin.module';
 import firebaseConfig from '../config/firebase.config';
 import { SuperAdminModule } from '../modules/superadmin/module/superadmin.module';
 import { UsersModule } from 'src/modules/users/module/users.module';
+import { RolesModule } from 'src/modules/roles/modules/roles.modules';
 
 //import databaseConfig from '../config/database.config';
 
@@ -30,7 +31,8 @@ import { UsersModule } from 'src/modules/users/module/users.module';
     }),
     FirebaseAdminModule,
     SuperAdminModule,
-    UsersModule
+    UsersModule,
+    RolesModule
     // Otros módulos...
   ],
 })
