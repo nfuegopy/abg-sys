@@ -17,6 +17,7 @@ import { ConfigModule } from '@nestjs/config';
 import { FirebaseAdminModule } from '../firebase-admin/firebase-admin.module';
 import firebaseConfig from '../config/firebase.config';
 import { SuperAdminModule } from '../modules/superadmin/module/superadmin.module';
+import { UsersModule } from 'src/modules/users/module/users.module';
 
 //import databaseConfig from '../config/database.config';
 
@@ -28,7 +29,8 @@ import { SuperAdminModule } from '../modules/superadmin/module/superadmin.module
       load: [firebaseConfig],
     }),
     FirebaseAdminModule,
-    SuperAdminModule
+    SuperAdminModule,
+    UsersModule
     // Otros módulos...
   ],
 })
