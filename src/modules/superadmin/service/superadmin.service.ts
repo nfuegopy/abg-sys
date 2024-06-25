@@ -41,7 +41,7 @@ export class SuperAdminService {
     const docRef = this.firestore.collection('superadmins').doc(id);
     const doc = await docRef.get();
     if (!doc.exists) {
-      throw new NotFoundException(`SuperAdmin with ID ${id} not found`);
+      throw new NotFoundException(`Super admin con el ID ${id} not found`);
     }
 
     const updatedData = { ...updateSuperAdminDto, updated_at: new Date() };
