@@ -17,7 +17,6 @@ export class SuperAdminService {
     const { name, email, password } = createSuperAdminDto;
     const hashedPassword = await bcrypt.hash(password, 10);
     const superAdminData: SuperAdmin = { name, email, password: hashedPassword, is_active: true, created_at: new Date(), updated_at: new Date() };
-
     const superAdminRef = this.firestore.collection('superadmins').doc();
     await superAdminRef.set(superAdminData);
 
