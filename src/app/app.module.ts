@@ -21,6 +21,8 @@ import { UsersModule } from 'src/modules/Admin/users/module/users.module';
 import { RolesModule } from 'src/modules/Admin/roles/modules/roles.modules';
 import { UserRoleModule } from 'src/modules/Admin/rolesuser/module/user-role.module';
 import { ClientsModule } from 'src/modules/referenciales/Clients/Module/clients.module';
+import { DefendantsModule } from 'src/modules/referenciales/Defendants/Module/defendants.module';
+import { CourtsModule } from 'src/modules/referenciales/Courts/module/courts.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
@@ -35,8 +37,9 @@ import { ClientsModule } from 'src/modules/referenciales/Clients/Module/clients.
     UsersModule,
     RolesModule,
     UserRoleModule,
-    ClientsModule
-    // Otros módulos...
+    ClientsModule,
+    DefendantsModule,
+    CourtsModule
   ],
 })
 export class AppModule {}
