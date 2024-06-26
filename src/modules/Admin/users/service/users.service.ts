@@ -2,7 +2,7 @@ import {Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateUsersDto } from '../dto/create-users.dto';
 import { UpdateUsersDto } from '../dto/update-users.dto';
-import { Users } from 'src/modules/users/interfaces/users.interface';
+import { Users } from 'src/modules/Admin/users/interfaces/users.interface';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
