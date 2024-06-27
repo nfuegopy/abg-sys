@@ -23,6 +23,7 @@ import { UserRoleModule } from 'src/modules/Admin/rolesuser/module/user-role.mod
 import { ClientsModule } from 'src/modules/referenciales/Clients/Module/clients.module';
 import { DefendantsModule } from 'src/modules/referenciales/Defendants/Module/defendants.module';
 import { CourtsModule } from 'src/modules/referenciales/Courts/module/courts.module';
+import { AuthModule } from 'src/modules/auth/module/auth.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
@@ -39,7 +40,8 @@ import { CourtsModule } from 'src/modules/referenciales/Courts/module/courts.mod
     UserRoleModule,
     ClientsModule,
     DefendantsModule,
-    CourtsModule
+    CourtsModule,
+    AuthModule
   ],
 })
 export class AppModule {}
