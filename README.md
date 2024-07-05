@@ -1,61 +1,37 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-<p align="center">Backend Utilizando <a href="http://nodejs.org" target="_blank">Node.js</a> Sistema de Backend para un Sistema de Abogados.</p>
-<p align="center"></p>
-</p>
-
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-Sistema de Backend para un Sistema de Abogados en crecimiento.
 
 
-## Installation
+## 🚀 Características
 
-```bash
-$ npm install
-```
+- Autenticación y autorización
+- Gestión de clientes y casos
+- Integración con Firebase
+- API RESTful
+- Modular y escalable
 
-## Running the app
+## 🛠️ Tecnologías
 
-```bash
-# development
-$ npm run start
+- [NestJS](https://nestjs.com/)
+- [Firebase](https://firebase.google.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Passport](http://www.passportjs.org/)
 
-# watch mode
-$ npm run start:dev
+🤝 Contribuir
+Las contribuciones son bienvenidas. Por favor, 
+## 📞 Contacto
 
-# production mode
-$ npm run start:prod
-```
+<div align="center">
+  <img src="https://github.com/nfuegopy.png" width="100" style="border-radius:50%;">
+  <h3>Antonio Barrios</h3>
+  <p>Desarrollador Full Stack | Entusiasta de NestJS</p>
+  
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/acbleguizamon?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+  [![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/nfuegopy?igsh=cmNqNXB6NHEyN2V1)
+  [![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://x.com/AntonioNFuegoPy?t=jV-D9Q7I2-EBipCj74r_eg&s=09)
+</div>
 
-## Test
+---
 
-```bash
-# unit tests
-$ npm run test
+<div align="center">
+  Hecho con por Antonio Barrios
+</div>
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Soporte
-
-Este proyecto de código abierto está bajo la licencia MIT. Puede crecer gracias a los patrocinadores y al apoyo de los increíbles patrocinadores. Si deseas unirte a ellos, por favor [lee mas aqui](https://docs.nestjs.com/support).
-
-## Mantente en contacto
-
-- Author - [Antonio Barrios](https://www.linkedin.com/in/acbleguizamon?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-- Instagram - [NfuegoPy](https://www.instagram.com/nfuegopy?igsh=cmNqNXB6NHEyN2V1)
-- Twitter - [@AntonioNfuegoPy](https://x.com/AntonioNFuegoPy?t=jV-D9Q7I2-EBipCj74r_eg&s=09)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
