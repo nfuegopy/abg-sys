@@ -1,8 +1,8 @@
-// src/firebase-admin.module.ts
 import { Module, Global } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { ConfigService } from '@nestjs/config';
 import * as fs from 'fs';
+import * as path from 'path';
 
 @Global()
 @Module({
@@ -10,15 +10,27 @@ import * as fs from 'fs';
     {
       provide: 'FIREBASE_ADMIN',
       useFactory: (configService: ConfigService) => {
-        const serviceAccountPath = configService.get<string>('FIREBASE_SERVICE_ACCOUNT_KEY');
+        let serviceAccountPath = configService.get<string>('FIREBASE_SERVICE_ACCOUNT_KEY');
+        console.log('Service account path from env:', serviceAccountPath);
+
+        if (!serviceAccountPath) {
+          serviceAccountPath = path.join(__dirname, '..', '..', 'serviceAccountKey.json');
+          console.log('Fallback service account path:', serviceAccountPath);
+        }
+
         if (!fs.existsSync(serviceAccountPath)) {
           throw new Error(`Service account key file not found at path: ${serviceAccountPath}`);
         }
-        const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf8'));
 
-        return admin.initializeApp({
-          credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
-        });
+        try {
+          const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf8'));
+          return admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount),
+          });
+        } catch (error) {
+          console.error('Error initializing Firebase Admin:', error);
+          throw error;
+        }
       },
       inject: [ConfigService],
     },

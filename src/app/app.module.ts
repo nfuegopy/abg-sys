@@ -26,11 +26,14 @@ import { CourtsModule } from 'src/modules/referenciales/Courts/module/courts.mod
 import { AuthModule } from 'src/modules/auth/module/auth.module';
 import { AssetTypesModule } from 'src/modules/referenciales/AssetTypes/Module/asset-types.module';
 import { AssetsModule } from 'src/modules/referenciales/Assets/Module/assets.module';
+import { SecretariesModule } from 'src/modules/referenciales/secretaries/Module/secretaries.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
+      envFilePath: '.env',
+
       isGlobal: true,
 //      load: [firebaseConfig, databaseConfig],
       load: [firebaseConfig],
@@ -45,7 +48,8 @@ import { AssetsModule } from 'src/modules/referenciales/Assets/Module/assets.mod
     CourtsModule,
     AuthModule,
     AssetTypesModule,
-    AssetsModule
+    AssetsModule,
+    SecretariesModule
   ],
 })
 export class AppModule {}
