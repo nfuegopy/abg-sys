@@ -27,6 +27,8 @@ import { AuthModule } from 'src/modules/auth/module/auth.module';
 import { AssetTypesModule } from 'src/modules/referenciales/AssetTypes/Module/asset-types.module';
 import { AssetsModule } from 'src/modules/referenciales/Assets/Module/assets.module';
 import { SecretariesModule } from 'src/modules/referenciales/secretaries/Module/secretaries.module';
+import { CasesModule } from 'src/modules/movimientos/cases/Module/cases.module';
+import { ClientCasesModule } from 'src/modules/movimientos/ClientCases/Module/client-cases.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
@@ -49,7 +51,9 @@ import { SecretariesModule } from 'src/modules/referenciales/secretaries/Module/
     AuthModule,
     AssetTypesModule,
     AssetsModule,
-    SecretariesModule
+    SecretariesModule,
+    CasesModule,
+    ClientCasesModule
   ],
 })
 export class AppModule {}
