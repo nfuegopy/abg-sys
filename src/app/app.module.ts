@@ -29,6 +29,9 @@ import { AssetsModule } from 'src/modules/referenciales/Assets/Module/assets.mod
 import { SecretariesModule } from 'src/modules/referenciales/secretaries/Module/secretaries.module';
 import { CasesModule } from 'src/modules/movimientos/cases/Module/cases.module';
 import { ClientCasesModule } from 'src/modules/movimientos/ClientCases/Module/client-cases.module';
+import { DefendantCasesModule } from 'src/modules/movimientos/DefendantCases/Model/defendant-cases.module';
+import { CaseAssetsModule } from 'src/modules/movimientos/CasesAssets/Module/case-assets.module';
+import { PaymentsModule } from 'src/modules/movimientos/Payments/Model/payments.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
@@ -53,7 +56,10 @@ import { ClientCasesModule } from 'src/modules/movimientos/ClientCases/Module/cl
     AssetsModule,
     SecretariesModule,
     CasesModule,
-    ClientCasesModule
+    ClientCasesModule,
+    DefendantCasesModule,
+    CaseAssetsModule,
+    PaymentsModule
   ],
 })
 export class AppModule {}
