@@ -32,6 +32,7 @@ import { ClientCasesModule } from 'src/modules/movimientos/ClientCases/Module/cl
 import { DefendantCasesModule } from 'src/modules/movimientos/DefendantCases/Model/defendant-cases.module';
 import { CaseAssetsModule } from 'src/modules/movimientos/CasesAssets/Module/case-assets.module';
 import { PaymentsModule } from 'src/modules/movimientos/Payments/Model/payments.module';
+import { CaseHistoryModule } from 'src/modules/movimientos/CaseHistory/Module/case-history.module';
 //import databaseConfig from '../config/database.config';
 
 @Module({
@@ -59,7 +60,8 @@ import { PaymentsModule } from 'src/modules/movimientos/Payments/Model/payments.
     ClientCasesModule,
     DefendantCasesModule,
     CaseAssetsModule,
-    PaymentsModule
+    PaymentsModule,
+    CaseHistoryModule
   ],
 })
 export class AppModule {}
