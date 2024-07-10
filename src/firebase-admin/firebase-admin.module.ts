@@ -49,15 +49,14 @@ import { ConfigService } from '@nestjs/config';
     {
       provide: 'FIREBASE_ADMIN',
       useFactory: (configService: ConfigService) => {
-        const firebaseCredentials = configService.get<string>('FIREBASE_CREDENTIALS');
+        const firebaseCredentials = configService.get('firebase.credential');
         if (!firebaseCredentials) {
-          throw new Error(`Firebase credentials are not defined in the environment variables.`);
+          throw new Error('Firebase credentials are not defined in the configuration.');
         }
 
         try {
-          const serviceAccount = JSON.parse(firebaseCredentials);
           return admin.initializeApp({
-            credential: admin.credential.cert(serviceAccount),
+            credential: admin.credential.cert(firebaseCredentials),
           });
         } catch (error) {
           console.error('Error initializing Firebase Admin:', error);
