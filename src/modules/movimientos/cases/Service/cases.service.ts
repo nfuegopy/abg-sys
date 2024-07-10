@@ -63,7 +63,7 @@ import * as admin from 'firebase-admin';
 import { CreateCaseDTO } from '../Dto/create-case.dto';
 import { UpdateCaseDTO } from '../Dto/update-case.dto';
 import { CaseInterface } from '../Interface/case.interface';
-import { CaseHistoryService } from '../../CaseHistory/Service/case-history.service';
+import { CaseHistoryService } from '../../CaseHistory/service/case-history.service';
 
 @Injectable()
 export class CasesService {
