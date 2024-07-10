@@ -1,7 +1,7 @@
 // src/modules/Movimientos/CaseHistory/Controller/case-history.controller.ts
 import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
-import { CaseHistoryService } from '../Service/case-history.service';
-import { CreateCaseHistoryDTO } from '../Dto/create-case-history.dto';
+import { CaseHistoryService } from '../service/case-history.service';
+import { CreateCaseHistoryDTO } from '../dto/create-case-history.dto';
 
 @Controller('case-history')
 export class CaseHistoryController {
