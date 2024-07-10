@@ -8,8 +8,8 @@
 
 //  }));
 // sconfiguracion para render 
- import { registerAs } from '@nestjs/config';
+import { registerAs } from '@nestjs/config';
 
- export default registerAs('firebase', () => ({
-   credential: JSON.parse(process.env.FIREBASE_CREDENTIALS),
- }));
+export default registerAs('firebase', () => ({
+  credential: JSON.parse(process.env.FIREBASE_CREDENTIALS || '{}'),
+}));
