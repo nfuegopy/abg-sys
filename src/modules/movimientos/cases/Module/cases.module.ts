@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { CasesService } from '../service/cases.service';
-import { CasesController } from '../controller/cases.controller';
+import { CasesService } from '../Service/cases.service';
+import { CasesController } from '../Controller/cases.controller';
 import { CaseHistoryModule } from '../../CaseHistory/Module/case-history.module';
 
 @Module({

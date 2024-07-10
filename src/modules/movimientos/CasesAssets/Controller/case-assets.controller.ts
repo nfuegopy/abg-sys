@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Get, Param, Patch, Delete } from '@nestjs/common';
-import { CaseAssetsService } from '../service/case-assets.service';
-import { CreateCaseAssetDTO } from '../dto/create-case-asset.dto';
-import { UpdateCaseAssetDTO } from '../dto/update-case-asset.dto';
+import { CaseAssetsService } from '../Service/case-assets.service';
+import { CreateCaseAssetDTO } from '../Dto/create-case-asset.dto';
+import { UpdateCaseAssetDTO } from '../Dto/update-case-asset.dto';
 
 @Controller('case-assets')
 export class CaseAssetsController {

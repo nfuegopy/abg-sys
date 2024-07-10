@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AssetsService } from '../service/assets.service';
-import { AssetsController } from '../controller/assets.controller';
+import { AssetsService } from '../Service/assets.service';
+import { AssetsController } from '../Controller/assets.controller';
 
 @Module({
   providers: [AssetsService],

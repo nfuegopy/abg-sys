@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { SecretariesService } from '../service/secretaries.service';
-import { SecretariesController } from '../controller/secretaries.controller';
+import { SecretariesService } from '../Service/secretaries.service';
+import { SecretariesController } from '../Controller/secretaries.controller';
 
 @Module({
   providers: [SecretariesService],

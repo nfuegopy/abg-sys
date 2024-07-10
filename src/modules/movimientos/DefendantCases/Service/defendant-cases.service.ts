@@ -1,8 +1,8 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { CreateDefendantCaseDTO } from '../dto/create-defendant-case.dto';
-import { UpdateDefendantCaseDTO } from '../dto/update-defendant-case.dto';
-import { DefendantCaseInterface } from '../interface/defendant-case.interface';
+import { CreateDefendantCaseDTO } from '../Dto/create-defendant-case.dto';
+import { UpdateDefendantCaseDTO } from '../Dto/update-defendant-case.dto';
+import { DefendantCaseInterface } from '../Interface/defendant-case.interface';
 
 @Injectable()
 export class DefendantCasesService {

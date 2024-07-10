@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Param, Get, Patch, Delete } from '@nestjs/common';
-import { AssetTypesService } from '../service/asset-types.service';
-import { CreateAssetTypeDTO } from '../dto/create-asset-type.dto';
-import { UpdateAssetTypeDTO } from '../dto/update-asset-type.dto';
+import { AssetTypesService } from '../Service/asset-types.service';
+import { CreateAssetTypeDTO } from '../Dto/create-asset-type.dto';
+import { UpdateAssetTypeDTO } from '../Dto/update-asset-type.dto';
 
 @Controller('asset-types')
 export class AssetTypesController {

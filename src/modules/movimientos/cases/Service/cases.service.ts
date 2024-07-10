@@ -60,9 +60,9 @@
 
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { CreateCaseDTO } from '../dto/create-case.dto';
-import { UpdateCaseDTO } from '../dto/update-case.dto';
-import { CaseInterface } from '../interface/case.interface';
+import { CreateCaseDTO } from '../Dto/create-case.dto';
+import { UpdateCaseDTO } from '../Dto/update-case.dto';
+import { CaseInterface } from '../Interface/case.interface';
 import { CaseHistoryService } from '../../CaseHistory/Service/case-history.service';
 
 @Injectable()

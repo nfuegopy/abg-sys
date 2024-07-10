@@ -1,7 +1,7 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { CreateAssetDTO } from '../dto/create-asset.dto';
-import { UpdateAssetDTO } from '../dto/update-asset.dto';
+import { CreateAssetDTO } from '../Dto/create-asset.dto';
+import { UpdateAssetDTO } from '../Dto/update-asset.dto';
 import { AssetInterface } from '../Interfaces/asset.interface';
 
 @Injectable()
