@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { CaseAssetsService } from '../service/case-assets.service';
-import { CaseAssetsController } from '../controller/case-assets.controller';
+import { CaseAssetsService } from '../Service/case-assets.service';
+import { CaseAssetsController } from '../Controller/case-assets.controller';
 
 @Module({
   providers: [CaseAssetsService],

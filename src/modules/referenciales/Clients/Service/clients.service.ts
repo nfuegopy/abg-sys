@@ -1,7 +1,7 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateClientsDTO } from '../Dto/create-clients.dto';
-import { UpdateClientsDTO } from '../dto/update-clients.dto';
+import { UpdateClientsDTO } from '../Dto/update-clients.dto';
 import { ClientsInterface } from '../Interfaces/clients.interface';
 
 

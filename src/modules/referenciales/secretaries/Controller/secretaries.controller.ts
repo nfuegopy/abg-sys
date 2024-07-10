@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Param, Get, Patch, Delete } from '@nestjs/common';
-import { SecretariesService } from '../service/secretaries.service';
-import { CreateSecretaryDTO } from '../dto/create-secretary.dto';
-import { UpdateSecretaryDTO } from '../dto/update-secretary.dto';
+import { SecretariesService } from '../Service/secretaries.service';
+import { CreateSecretaryDTO } from '../Dto/create-secretary.dto';
+import { UpdateSecretaryDTO } from '../Dto/update-secretary.dto';
 
 @Controller('secretaries')
 export class SecretariesController {

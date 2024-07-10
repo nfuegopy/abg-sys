@@ -1,8 +1,8 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { CreatePaymentDTO } from '../dto/create-payment.dto';
-import { UpdatePaymentDTO } from '../dto/update-payment.dto';
-import { PaymentInterface } from '../interface/payment.interface';
+import { CreatePaymentDTO } from '../Dto/create-payment.dto';
+import { UpdatePaymentDTO } from '../Dto/update-payment.dto';
+import { PaymentInterface } from '../Interface/payment.interface';
 
 @Injectable()
 export class PaymentsService {

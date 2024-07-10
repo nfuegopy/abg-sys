@@ -1,8 +1,8 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { CreateSecretaryDTO } from '../dto/create-secretary.dto';
-import { UpdateSecretaryDTO } from '../dto/update-secretary.dto';
-import { SecretaryInterface } from '../interfaces/secretary.interface';
+import { CreateSecretaryDTO } from '../Dto/create-secretary.dto';
+import { UpdateSecretaryDTO } from '../Dto/update-secretary.dto';
+import { SecretaryInterface } from '../Interfaces/secretary.interface';
 
 @Injectable()
 export class SecretariesService {

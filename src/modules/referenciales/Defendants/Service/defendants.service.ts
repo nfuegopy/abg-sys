@@ -1,7 +1,7 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateDefendantsDTO } from '../Dto/create-defendants.dto';
-import { UpdateDefendantsDTO } from '../dto/update-defendants.dto';
+import { UpdateDefendantsDTO } from '../Dto/update-defendants.dto';
 import { DefendantsInterface } from '../Interfaces/defendants.interface';
 
 

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { DefendantCasesService } from '../service/defendant-cases.service';
-import { DefendantCasesController } from '../controller/defendant-cases.controller';
+import { DefendantCasesService } from '../Service/defendant-cases.service';
+import { DefendantCasesController } from '../Controller/defendant-cases.controller';
 
 @Module({
   providers: [DefendantCasesService],
