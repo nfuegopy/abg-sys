@@ -10,7 +10,7 @@
 //     {
 //       provide: 'FIREBASE_ADMIN',
 //       useFactory: (configService: ConfigService) => {
-//         let serviceAccountPath = configService.get<string>('FIREBASE_SERVICE_ACCOUNT_KEY');
+//         let serviceAccountPath = configService.get<string>('FIREBASE_CREDENTIALS');
 //         console.log('Service account path from env:', serviceAccountPath);
 
 //         if (!serviceAccountPath) {
@@ -38,6 +38,8 @@
 //   exports: ['FIREBASE_ADMIN'],
 // })
 // export class FirebaseAdminModule {}
+
+//configuracin RENDER
 
 import { Module, Global } from '@nestjs/common';
 import * as admin from 'firebase-admin';

@@ -4,7 +4,7 @@
 //  import * as path from 'path';
 
 //  export default registerAs('firebase', () => ({
-//    serviceAccountPath: process.env.FIREBASE_SERVICE_ACCOUNT_KEY || path.join(__dirname, '..', '..', 'serviceAccountKey.json'),
+//    serviceAccountPath: process.env.FIREBASE_CREDENTIALS || path.join(__dirname, '..', '..', 'serviceAccountKey.json'),
 
 //  }));
 // sconfiguracion para render 

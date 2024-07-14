@@ -38,13 +38,30 @@ export class CaseHistoryService {
   }
 
   async findByCaseId(caseId: string): Promise<CaseHistoryInterface[]> {
-    const snapshot = await this.firestore.collection('case_history')
-      .where('case_id', '==', caseId)
-      .orderBy('timestamp', 'desc')
-      .get();
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as CaseHistoryInterface));
+    try {
+      console.log(`Searching for case history with case_id: ${caseId}`);
+      
+      const snapshot = await this.firestore.collection('case_history')
+        .where('case_id', '==', caseId)
+        .orderBy('timestamp', 'desc')
+        .get();
+  
+      console.log(`Query executed. Found ${snapshot.size} documents.`);
+  
+      return snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      } as CaseHistoryInterface));
+  
+    } catch (error) {
+      console.error('Error fetching case history:', error);
+      if (error.code === 'FAILED_PRECONDITION' && error.message.includes('The query requires an index')) {
+        throw new Error('El índice necesario para esta consulta aún no está listo. Por favor, espera unos minutos y vuelve a intentarlo.');
+      }
+      throw new Error(`Error fetching case history for case ID ${caseId}: ${error.message}`);
+    }
   }
-
+  
   async update(id: string, updateCaseHistoryDto: UpdateCaseHistoryDTO): Promise<CaseHistoryInterface> {
     const docRef = this.firestore.collection('case_history').doc(id);
     const doc = await docRef.get();
@@ -73,4 +90,6 @@ export class CaseHistoryService {
     }
     await docRef.delete();
   }
+
+
 }

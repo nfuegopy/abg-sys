@@ -1,5 +1,5 @@
 // src/modules/Movimientos/CaseHistory/Controller/case-history.controller.ts
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, NotFoundException, HttpException, HttpStatus } from '@nestjs/common';
 import { CaseHistoryService } from '../service/case-history.service';
 import { CreateCaseHistoryDTO } from '../dto/create-case-history.dto';
 
@@ -23,8 +23,20 @@ export class CaseHistoryController {
   }
 
   @Get('case/:caseId')
-  findByCaseId(@Param('caseId') caseId: string) {
-    return this.caseHistoryService.findByCaseId(caseId);
+  async findByCaseId(@Param('caseId') caseId: string) {
+    try {
+      const history = await this.caseHistoryService.findByCaseId(caseId);
+      if (history.length === 0) {
+        throw new NotFoundException(`No history found for case ID ${caseId}`);
+      }
+      return history;
+    } catch (error) {
+      console.error(`Error in findByCaseId controller: ${error.message}`);
+      if (error.message.includes('El índice necesario para esta consulta aún no está listo')) {
+        throw new HttpException(error.message, HttpStatus.SERVICE_UNAVAILABLE);
+      }
+      throw new NotFoundException(`Error fetching history for case ID ${caseId}: ${error.message}`);
+    }
   }
 
   @Delete(':id')
